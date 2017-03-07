@@ -1,0 +1,28 @@
+1. Hours to complete the project: I began working on this project around the time the checklist was uploaded which was in the begenning of the week. I wouked on this for a couple hours per day which led me to estimate around 30 hours of working on this project. 
+
+2. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Model a Percolation System): One problem I had working on this part of the assignment was the encode method. I had to go through multiple equations before I came to the one I was looking for that worked with everything. The first few I had were "2 * N * i + j" as well as " i * i + j* i + 1" but neitehr of those two worked on all numbers of i and j. I narrowed it down and I finally got to the one that I had used which worked for each one. 
+
+	Another problem I had was that some sites were opening when they were not supposed to which introduced me to the backwash problem. After some thinking I came up with a solution that I thought would have worked. I thought that maybe I could only connect the bottom row sites if they were connected to the source that way no site would be connected to the sink if they werenot already blue to begin with. However, after writing out this function, I was not able to solve the backwash problem. Then I consulted my peers and my peer mentor had suggested creating a copy method which would copy everything since this copy of unionFind prevented backwash by not having a sink. By doing this though, it messed up my percolationStats somehow and so that was not working. I realized this was becasue my "this.N = N" was not in the correct spot and after fixing this, the whole program worked. 
+
+	Last main problem I had was the if statements that I had to use in the "open" method. I went to my mother for this problem as she is a computer scientist and she helped me by drawing out visuals. She drew out a 3 X 3 grid and opened one site (i, j). It was thorugh that visual I was able to figure out the bounds of the if statemtns such as "(j - 1) >= 0" or "(i + 1) < N" while connecting the neighboring sites. 
+
+   Problem 2 (Estimate Percolation Threshold): One main problem I had with this was that I had not realized before that there was a library "StdStats" that was imported. Becasue I did not know this, I wasted a lot of time actually thinking and writing out the functions of mean and stddev when I couldve simply called that library. I commented my functions out and simply called upon that libray instead as it gave me faster results. 
+
+	Another major problem I had was that in the begenning my results was giving me very high numbers (in the thousands) and so I knew there was something wrong with my methods. I checked my methods( mean, stddev, conf low and high) over and over and saw nothing wrong with them. Then I finally checked my constructor and realized that I was not divding my p[i] count by (N*N) which then gave me the correct answers. 
+
+3. Did you receive help from anyone? List their names, status (classmate, 
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       						Help Received
+Meena Chauhan; Mother(Computer Scientists); who mainly helped with the project and I went to her for lot of questions
+Justin Kwan; Class Peer; he helped me realize the backwash problem needed to be a copy. 
+  
+
+4. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   I learned mainly about creating object in java and how the structure of a big java class is as well as how things work together to create something larger. 
